@@ -13,7 +13,7 @@ export default class CalculatorConditional extends LightningElement {
     handleNum1(event) {
         this.num1 = Number(event.target.value);
     }
-
+ // Hello made changes gg 
     handleNum2(event) {
         this.num2 = Number(event.target.value);
     }

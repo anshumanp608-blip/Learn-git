@@ -19,7 +19,7 @@ public with sharing class controllerapex {
             list<account>  acs = [Select Name,Industry,Total_contacts__c from account where Name like:('%'+ n +'%')];
             return acs;
         }
-
+// Hello Mic Check 
         @AuraEnabled()
         public static string delaccount( string aid){
             account acs;

@@ -5,7 +5,7 @@ public with sharing class caseComp {
         list<account> ac = [select Name,Industry,Id from Account];
         return ac;
     }
-// Hello to Git
+// Hello to Git 
 
     @AuraEnabled
     public static string casemethod(string sta , string pri ,string ori, string sub){

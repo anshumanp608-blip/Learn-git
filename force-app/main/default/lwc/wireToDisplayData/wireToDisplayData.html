@@ -1,0 +1,38 @@
+<template>
+    <div style="background-color: antiquewhite; ">
+        <p style="color:blueviolet;font-size:large;margin-left:30px"> <strong> Case Records</strong> </p>
+        <br>
+        <lightning-button label="NEW CASE" onclick={handlenew}></lightning-button>
+        <br>
+        
+    <!-- Next Div -->
+        <div class="slds-grid slds-wrap">
+
+            <template for:each={cadata.data} for:item="cas">
+
+                <div key={cas.Id} class="slds-col slds-size_1-of-3 slds-p-around_small">
+
+                    <lightning-card title={cas.Origin}>
+
+                        <lightning-button label="View" variant="Success" slot="actions" name={cas.Id}
+                            onclick={handleView}></lightning-button>
+
+                        <div class="slds-p-around_medium">
+
+                            <p><strong>Contact Id:</strong> {cas.ContactId}</p>
+                            <p><strong>Priority:</strong> {cas.Priority}</p>
+
+                        </div>
+                        <p slot="footer">
+                            <strong>Status:</strong> {cas.Status}
+                        </p>
+
+                    </lightning-card>
+
+                </div>
+
+            </template>
+
+        </div>
+    </div>
+</template>

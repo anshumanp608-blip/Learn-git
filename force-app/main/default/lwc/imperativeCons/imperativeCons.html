@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-grid slds-wrap" style="background-color: aquamarine;">
+        <template for:each={c.data} for:item="cx">
+            <div key={cx.Id} class="slds-col slds-size_1-of-3 slds-p-around_xx-small ">
+                <lightning-card title={cx.Name} >
+                    <lightning-button label="Update" onclick={handleupdate}
+                    slot="actions" name={cx.Id}> </lightning-button>
+
+                    <lightning-button label="Delete" onclick={handledel}
+                    slot="actions" name={cx.Id}> </lightning-button>
+                    <p> Lastname : {cx.LastName}</p>
+                    <p> LeadSource : {cx.LeadSource}</p>
+                    <p slot="footer"> Email : {cx.Email}</p>
+                </lightning-card>
+            </div>
+        </template>
+    </div>
+</template>

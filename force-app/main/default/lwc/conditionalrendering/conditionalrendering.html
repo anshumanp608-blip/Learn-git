@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-box" style="background-color: lightgoldenrodyellow;color: darkgreen;font-weight: bold;">
+        <lightning-button label="click to change" onclick={handleClick}></lightning-button>
+        <br>
+        
+        <template lwc:if={bool}>
+            <lightning-card title="This is Section One"></lightning-card>
+        </template>
+
+        <template lwc:else>
+
+            <lightning-card title="Section Two"></lightning-card>
+        </template>
+    </div>
+</template>

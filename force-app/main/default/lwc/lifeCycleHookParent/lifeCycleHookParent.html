@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Parent Component">
+        <lightning-input
+            label="Enter Name"
+            value={parentName}
+            onchange={handleChange}>
+        </lightning-input>
+
+        <p>Parent Value: {parentName}</p>
+
+        <c-child-lifecycle child-name={parentName}></c-child-lifecycle>
+    </lightning-card>
+</template>

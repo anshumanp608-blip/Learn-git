@@ -1,0 +1,25 @@
+<template>
+    <template iterator:it={students}>
+        <div key={it.value.id} style="background-color: rgb(246, 245, 245);font-weight: bold;">
+            <p>Student data: </p>
+            <template lwc:if={it.first}>
+                <div style="background-color: rgb(214, 210, 94);color: rgb(213, 9, 9);font-weight: bold;">
+                    <p style="font-weight: bold; font-size: 15px;">{it.value.id}</p>
+                    <p>{it.value.name}</p>
+                    <p>{it.value.email}</p>
+                </div>
+            </template>
+            <template lwc:elseif={it.last}>
+                  <div style="background-color: rgb(9, 150, 193);color: rgb(2, 41, 9);font-weight: bold;">
+                     <p style="font-weight: bold; font-size: 15px;">{it.value.id}</p>
+                    <p>{it.value.name}</p>
+                    <p>{it.value.email}</p>
+                </div>
+            </template>
+            <template lwc:else>
+                 <p>{it.value.name}</p>
+                 <p>{it.value.email}</p>
+            </template>
+                </div>
+    </template>
+</template>

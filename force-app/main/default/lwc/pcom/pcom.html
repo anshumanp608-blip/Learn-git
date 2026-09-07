@@ -1,0 +1,17 @@
+<template>
+    <div> 
+        <lightning-card title = 'Parent Component'> 
+            <lightning-input type = 'text'
+            label = 'Enter your name'
+            placeholder = 'Enter value'
+            onchange = {handleChange}   
+              > </lightning-input>
+              <lightning-button variant = 'brand' label = 'Click Me' 
+              onclick = {change}></lightning-button>
+           <br>
+            </lightning-card>
+    </div>
+    
+    <c-c-com bchange = {result}></c-c-com>
+    
+</template>

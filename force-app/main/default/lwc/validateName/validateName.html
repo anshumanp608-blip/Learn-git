@@ -1,0 +1,21 @@
+<template>
+    <lightning-accordion>
+        <lightning-accordion-section name="A" label="Validate Name">
+            <lightning-input label="Enter Name" value={str} onchange={handleInput}></lightning-input>
+
+            <lightning-button label="Verify" onclick={handleChange}> </lightning-button>
+            <p>{msg}</p><br/>
+            
+
+        <!--    <lightning-combobox
+        label="Select City"
+        value={selectedCity}
+        options={cityOptions}
+        onchange={handleChange}>
+    </lightning-combobox>
+    
+    <p>Selected City: {selectedCity}</p>
+-->
+        </lightning-accordion-section>
+    </lightning-accordion>
+</template>

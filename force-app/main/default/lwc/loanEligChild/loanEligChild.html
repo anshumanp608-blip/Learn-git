@@ -1,0 +1,19 @@
+<template>
+    
+    <lightning-card title="DETAILS OF APPLICANT">
+      <!--  <template for:each={checkelig} for:item="cx"> 
+            <div key={cx.Name} style="background-color: cyan"> -->
+                <lightning-card>
+        <p style="margin-left: 20px"> Loan Applicant : {checkelig.Name}</p>
+        <p style="margin-left: 20px"> Montly Salary : {checkelig.MonthlyIncome}</p>
+        <p style="margin-left: 20px"> Loan Amount : {checkelig.Amount}</p>
+        <p>{Eligibility} </p>
+        <lightning-button label="Check Eligibility" variant="destructive"
+        onclick={handlelig}>  </lightning-button>
+        
+        </lightning-card>
+        <!-- </div>  -->
+    <!-- </template> -->
+   </lightning-card>
+
+</template>

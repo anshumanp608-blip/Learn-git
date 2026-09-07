@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="parent">
+        <lightning-input type="text" onblur={chHandler} placeholder="enter a msg"></lightning-input>
+        <c-methodchild ch-msg={msg}></c-methodchild>
+        <lightning-button variant="brand" label="Click to send" onclick={clHandler}></lightning-button>
+    </lightning-card>
+    
+</template>

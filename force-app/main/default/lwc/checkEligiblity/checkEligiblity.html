@@ -1,0 +1,13 @@
+<template>
+     <lightning-card title="Enter Age">
+          <div class="slds-p-around_medium">
+               <lightning-input type="number" label="Enter age" placeholder="Enter age" value={age}
+                    onchange={handleChange}> </lightning-input>
+          </div>
+          <p style="margin-left: 15px; margin-top: 0px;margin-bottom: 10px;"> {message} </p>
+          <lightning-button variant="brand" label="Check Eligiblity" onclick={checkEligiblity}
+               class="slds-m-left_small"> </lightning-button>
+
+
+     </lightning-card>
+</template>

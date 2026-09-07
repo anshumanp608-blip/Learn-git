@@ -1,0 +1,17 @@
+<template>
+    <div style="background-color: aquamarine;">
+        <lightning-card title='Employee Input p2c'>
+            <lightning-input label='Enter Employee Name' value={name} onchange={handleNameChange}> </lightning-input>
+            <lightning-input label='Enter Employee Department' value={department} onchange={handleDepartmentChange}>
+            </lightning-input>
+            <lightning-input label='Enter Employee Salary' value={salary} onchange={handleSalaryChange}>
+            </lightning-input>
+            <lightning-input label='Enter Employee Experience' type="number" value={experience} onchange={handleExperienceChange}>
+            </lightning-input>
+            <br>
+        <lightning-button label='Submit' onclick={onclickhanle} variant="destructive-text"></lightning-button>
+        </lightning-card>
+
+        <c-employee-child name={n} department={d} salary={s} experience={e} msg={msg}></c-employee-child>
+    </div>
+</template>

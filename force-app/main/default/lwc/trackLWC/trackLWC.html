@@ -1,0 +1,12 @@
+<template>    
+    <lightning-card title="Student Data">
+        <lightning-input type="text" label="Enter Student Name" 
+        onchange={chng}></lightning-input>
+        <template for:each={student} for:item="std">
+            <p key={std}>
+                {std}
+            </p>
+        </template> 
+        <p slot="footer">Default value => {msg}</p>
+    </lightning-card>
+</template>

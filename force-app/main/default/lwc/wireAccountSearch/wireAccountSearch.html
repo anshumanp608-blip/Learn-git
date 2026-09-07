@@ -1,0 +1,36 @@
+<template>
+    <div>
+        <div style="background-color: antiquewhite;">
+            <lightning-input
+                label="Search Account"
+                placeholder="Enter Account Name"
+                value={name}
+                onchange={handseach}>
+            </lightning-input>
+        </div>
+
+        <br>
+
+        <div class="slds-grid slds-wrap" style="background-color:rgb(45, 197, 210);">
+
+            <template for:each={srch.data} for:item="acc">
+
+                <div key={acc.Id} class="slds-col slds-size_1-of-3 slds-p-around_x-small">
+
+                    <lightning-card title={acc.Name}>
+
+                        <div class="slds-p-around_medium">
+                            <p><strong>Industry:</strong> {acc.Industry}</p>
+                            <p><strong>Total Contacts:</strong> {acc.Total_contacts__c}</p>
+                        </div>
+
+                    </lightning-card>
+
+                </div>
+
+            </template>
+
+        </div>
+
+    </div>
+</template>

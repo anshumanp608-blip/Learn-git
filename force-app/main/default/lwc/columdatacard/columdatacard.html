@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title='Student List'>
+        <div class="slds-grid slds-wrap">
+            <template for:each={students} for:item="std">
+                <div key={std.id} class="slds-col slds-size_1-of-3 slds-p-around_small">
+                    <lightning-card title="Student Detail">
+                        <div class="slds-p-around_medium" style="background-color:rgb(146, 217, 235); border-radius: 10px;">
+                            <p style="font-size:25px ; color:rgb(187, 62, 62)"><strong>{std.id}</strong> </p>
+                            <p style="font-size:20px"><strong>Name:</strong> {std.name}</p>
+                            <p style="font-size:20px"><strong>Email:</strong> {std.email}</p>
+                            <hr/>
+                            <p style="font-size:20px; text-align: center;"><strong>Verified</strong></p>
+                            
+                        </div>
+                    </lightning-card>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

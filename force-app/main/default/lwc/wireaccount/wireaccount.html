@@ -1,0 +1,31 @@
+<template>
+        <div style="background-color: aquamarine;">
+            <p style="font-size: 30px; font-weight:bold ; margin-left:15px"> Account Details </p>
+            <br>
+            <lightning-button label="Create Account" onclick={handnew} variant="destructive"></lightning-button>
+            <div class="slds-grid slds-wrap">
+
+                <template for:each={acdata.data} for:item="acd">
+
+                    <div key={acd.Id} class="slds-col slds-size_1-of-3 slds-p-around_xx-small ">
+                        <lightning-card title={acd.Name} >
+                            <lightning-button label="View" onclick= {handview} variant="brand-outline"
+                            name={acd.Id} slot="actions"> </lightning-button>
+
+                            <lightning-button label="Edit" onclick= {handedit} variant="destructive-text" 
+                            name={acd.Id} slot="actions"> </lightning-button>
+
+                            <lightning-button label="X" onclick= {handledel} variant="destructive-text" 
+                            name={acd.Id} slot="actions"> </lightning-button>
+
+                            <p style="margin-left:10px;"><strong> Industry : </strong>{acd.Industry}</p>
+                            <p style="margin-left:10px;"> <strong>Annual Revenue :</strong> {acd.AnnualRevenue}</p>
+                            <p style="margin-left:10px;"> <strong>Industry :</strong> {acd.Industry}</p>
+                            <p slot="footer"> <strong>Total Contacts : {acd.Total_contacts__c} </strong></p>
+                        </lightning-card>
+                    </div>
+                </template>
+            </div>
+        </div>
+    
+</template>

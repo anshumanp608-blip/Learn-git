@@ -1,0 +1,22 @@
+<template>
+     <lightning-card title="Shopping Details p2c">
+
+        <lightning-combobox
+            label="Product"
+            value={product}
+            options={productOptions}
+            onchange={handleproductoptions}>
+        </lightning-combobox>
+
+        <lightning-input label = "Enter Product Price" type="Number" value = {price} onchange={handprice}>
+        </lightning-input>
+
+        <lightning-input label = "Enter Product Quantity" type="Number" value= {quantity} onchange={handquant}>
+        </lightning-input>
+
+        <lightning-button label="Generate Bill" onclick={handtotal}></lightning-button>
+
+        <c-shopping-Child product = {selectedProduct} quantity = {q} 
+        total = {total} price = {pr} result = {result} msg ={msg} disc ={disc} ></c-shopping-Child>
+    </lightning-card>
+</template>

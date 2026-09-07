@@ -1,0 +1,92 @@
+<template>
+    <div class="slds-box" style="font-size: x-large; 
+    background-color: rgb(243, 186, 238); color:rgb(8, 10, 0);
+    font-weight: bold;">
+    
+        Account Details : 
+        <!-- <lightning-record-form 
+            object-api-name="Account" 
+            record-id="001dM00000KRbF7QAL" 
+            layout-type="Full" 
+            columns="2"></lightning-record-form>  -->
+        <!-- <lightning-record-form 
+            object-api-name="Account" 
+            record-id={recordId} 
+            layout-type="Compact"
+            columns="2">
+        </lightning-record-form> -->
+        <lightning-record-form 
+            object-api-name={objectApiName} 
+            record-id={recordId} 
+            layout-type="Compact"
+            columns="2">
+        </lightning-record-form> 
+        <!-- <lightning-record-form 
+            object-api-name={objectApiName} 
+            record-id={recordId} 
+            fields={fields}
+            columns="2">
+        </lightning-record-form> -->
+    
+        <!--as recordId attribute is missing in below code =>  this will going to behave like create form for Account-->
+
+        <!-- <lightning-record-form 
+            object-api-name='Account'
+            fields={fields}
+            columns="2"
+            mode="edit" 
+            onsuccess={formHandler}>
+        </lightning-record-form> -->
+    
+        <!--now, let say i want account name must be displayed after industry so with record-form it is not possible being reason we have to go for -->
+
+        <!-- <lightning-record-view-form object-api-name={objectApiName} record-id={recordId}>
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-output-field field-name="Phone"></lightning-output-field> 
+                    <lightning-output-field field-name="Email"></lightning-output-field> 
+                </div>
+            </div>
+        </lightning-record-view-form> -->
+
+      <!--  <lightning-record-edit-form object-api-name="Account" onsuccess={formHandler}>
+            <lightning-messages></lightning-messages>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Name"></lightning-input-field> 
+                <lightning-input-field field-name="Phone"></lightning-input-field> 
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="Industry"></lightning-input-field> 
+                    <lightning-input-field field-name="Rating"></lightning-input-field> 
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-button label="save Record" variant="brand" type="submit"></lightning-button> 
+                    <lightning-button variant="Neutral" label="Reset"
+                    class="slds-m-left_x-small" type="reset">
+                    </lightning-button>
+                </div>
+            </div>
+        </lightning-record-edit-form>-->
+        <!-- <lightning-record-edit-form object-api-name="Account" onsuccess={formHandler} record-id={recordId}>
+            <lightning-messages></lightning-messages>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field field-name="Name"></lightning-input-field> 
+                <lightning-input-field field-name="Phone"></lightning-input-field> 
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name="Industry"></lightning-input-field> 
+                    <lightning-input-field field-name="Rating"></lightning-input-field> 
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-button label="save Record" variant="brand" type="submit"></lightning-button> 
+                    <lightning-button variant="Neutral" label="Cancel"
+                    class="slds-m-left_x-small" type="reset">
+                    </lightning-button>
+                </div>
+            </div>
+        </lightning-record-edit-form> -->
+    </div>
+
+</template>

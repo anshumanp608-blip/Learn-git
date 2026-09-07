@@ -1,0 +1,14 @@
+<template>
+    <lightning-input label="Search" placeholder="Enter name" onchange={handlechange}> </lightning-input>
+<template for:each={s.data} for:item="sx">
+    <div key={sx.Id}>
+        
+        <lightning-card>
+            
+            <p>Last Name: {sx.LastName}</p>
+            <p>Email: {sx.Email}</p>
+            
+        </lightning-card>
+    </div>
+</template>
+</template> 
